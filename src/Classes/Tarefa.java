@@ -3,6 +3,8 @@ package Classes;
 import Enums.PriorityEnum;
 import Enums.StatusEnum;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 public class Tarefa {
     String name;
@@ -11,6 +13,8 @@ public class Tarefa {
     PriorityEnum priority;
     String category;
     StatusEnum status;
+
+    SimpleDateFormat sdf = new SimpleDateFormat("d/M/y hh:mm a");
 
     public Tarefa(String name, String description, Date final_date,
                    PriorityEnum priority, String category, StatusEnum status) {
@@ -75,7 +79,7 @@ public class Tarefa {
         return "Classes.Tarefa{" +
                 "name='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", final_date=" + final_date +
+                ", final_date=" + sdf.format(final_date) +
                 ", priority=" + priority +
                 ", category='" + category + '\'' +
                 ", status=" + status +
