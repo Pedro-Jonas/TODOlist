@@ -3,21 +3,20 @@ package Classes;
 import Enums.PriorityEnum;
 import Enums.StatusEnum;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-public class Tarefa {
+public class Task {
     String name;
     String description;
     Date final_date;
-    PriorityEnum priority;
+    int priority;
     String category;
-    StatusEnum status;
+    String status;
 
     SimpleDateFormat sdf = new SimpleDateFormat("d/M/y hh:mm a");
 
-    public Tarefa(String name, String description, Date final_date,
-                   PriorityEnum priority, String category, StatusEnum status) {
+    public Task(String name, String description, Date final_date,
+                   int priority, String category, String status) {
         this.name = name;
         this.description = description;
         this.final_date = final_date;
@@ -50,11 +49,11 @@ public class Tarefa {
         this.final_date = final_date;
     }
 
-    public PriorityEnum getPriority() {
+    public int getPriority() {
         return priority;
     }
 
-    public void setPriority(PriorityEnum priority) {
+    public void setPriority(int priority) {
         this.priority = priority;
     }
 
@@ -66,11 +65,11 @@ public class Tarefa {
         this.category = category;
     }
 
-    public StatusEnum getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(StatusEnum status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -80,9 +79,9 @@ public class Tarefa {
                 "name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", final_date=" + sdf.format(final_date) +
-                ", priority=" + priority.getPriority() +
+                ", priority=" + priority +
                 ", category='" + category + '\'' +
-                ", status=" + status.getStatus() +
+                ", status=" + status +
                 '}';
     }
 }
