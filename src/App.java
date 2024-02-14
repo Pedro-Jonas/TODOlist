@@ -14,7 +14,7 @@ public class App {
         Date data2 = sdf.parse("22/02/2024  2:50 PM");
 
         Tarefa tarefa1 = new Tarefa ( "criar o botão", "botão do altura 100px e largura 300px",
-                data2, PriorityEnum.P3, "layout", StatusEnum.TODO);
+                data2, PriorityEnum.P4, "layout", StatusEnum.TODO);
         System.out.println(tarefa1);
     }
 }

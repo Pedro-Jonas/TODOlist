@@ -80,9 +80,9 @@ public class Tarefa {
                 "name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", final_date=" + sdf.format(final_date) +
-                ", priority=" + priority +
+                ", priority=" + priority.getPriority() +
                 ", category='" + category + '\'' +
-                ", status=" + status +
+                ", status=" + status.getStatus() +
                 '}';
     }
 }
