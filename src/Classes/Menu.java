@@ -20,7 +20,7 @@ public class Menu {
                     action.new_task();
                     break;
                 case 2:
-                    action.see_tasks();
+                    action.list_tasks();
                     break;
                 case 3:
                     System.out.println("não implementado");
@@ -33,7 +33,4 @@ public class Menu {
             op = sc.nextInt();
         }
     }
-
-
-
 }
