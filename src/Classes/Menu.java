@@ -23,7 +23,7 @@ public class Menu {
                     action.list_tasks();
                     break;
                 case 3:
-                    System.out.println("não implementado");
+                    action.delete_Task();
                     break;
                 default:
                     System.out.println("Digite uma opção válida");
