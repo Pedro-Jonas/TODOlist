@@ -1,8 +1,5 @@
 package Classes;
 
-import Enums.PriorityEnum;
-import Enums.StatusEnum;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 public class Task {
@@ -75,13 +72,13 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Classes.Tarefa{" +
-                "name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", final_date=" + sdf.format(final_date) +
-                ", priority=" + priority +
-                ", category='" + category + '\'' +
-                ", status=" + status +
-                '}';
+        return "{" +
+                "NAME='" + name + '\'' +
+                ", DESCRIÇÃO= " + description + '\'' +
+                ", DATA FINAL= " + sdf.format(final_date) +
+                ", PRIORIDADE= " + priority +
+                ", CATEGORIA= " + category + '\'' +
+                ", STATUS= " + status +
+                "}";
     }
 }
