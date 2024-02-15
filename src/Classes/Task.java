@@ -2,7 +2,7 @@ package Classes;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-public class Task {
+public class Task implements Comparable<Task> {
     String name;
     String description;
     Date final_date;
@@ -80,5 +80,15 @@ public class Task {
                 ", CATEGORIA= " + category + '\'' +
                 ", STATUS= " + status +
                 "}";
+    }
+
+    @Override
+    public int compareTo(Task task) {
+        if (this.getPriority() < task.getPriority()) {
+            return 1;
+        } else if (this.getPriority() > task.getPriority()) {
+            return -1;
+        }
+        return 0;
     }
 }

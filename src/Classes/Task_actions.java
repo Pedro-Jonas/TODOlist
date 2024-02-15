@@ -5,9 +5,7 @@ import Enums.StatusEnum;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Task_actions {
@@ -37,6 +35,7 @@ public class Task_actions {
         SimpleDateFormat sdf = new SimpleDateFormat("d/M/y hh:mm a");
         Task task = new Task ( name, description, sdf.parse(date), priority, category, status);
         all_tasks.add(task);
+        Collections.sort(all_tasks);
     }
 
     public void list_tasks() {
